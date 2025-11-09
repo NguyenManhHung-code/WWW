@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="ql_dienthoaiPU" transaction-type="RESOURCE_LOCAL">
+        <class>iuh.fit.se.entity.NhaCungCap</class>
+        <class>iuh.fit.se.entity.DienThoai</class>
+
+        <properties>
+            <!-- MariaDB -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/quanlydienthoai"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="rootpassword"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
