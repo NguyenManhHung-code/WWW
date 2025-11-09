@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean -->
+    <bean id="address1" class="iuh.fit.se.xmlconfig.Address">
+        <property name="city" value="Ho Chi Minh"/>
+        <property name="state" value="Go Vap"/>
+        <property name="country" value="Vietnam"/>
+    </bean>
+
+    <!-- Employee with Setter Injection -->
+    <bean id="empSetter" class="iuh.fit.se.xmlconfig.Employee">
+        <property name="id" value="101"/>
+        <property name="name" value="Nguyen Van A"/>
+        <property name="address" ref="address1"/>
+    </bean>
+
+    <!-- Employee with Constructor Injection -->
+    <bean id="empConstructor" class="iuh.fit.se.xmlconfig.Employee">
+        <constructor-arg value="102"/>
+        <constructor-arg value="Tran Thi B"/>
+        <constructor-arg ref="address1"/>
+    </bean>
+</beans>
