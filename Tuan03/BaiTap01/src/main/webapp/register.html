@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-form {
+            background-color: #444;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 450px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #eee;
+            border-bottom: 2px solid #555;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px; /* Tạo khoảng cách giữa các hàng */
+        }
+        td {
+            padding: 0;
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 120px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #eee;
+            box-sizing: border-box;
+            outline: none;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .sub-label {
+            display: block;
+            font-size: 12px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .name-fields {
+            display: flex;
+            gap: 10px;
+        }
+        .name-fields div {
+            flex: 1;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="register-form">
+    <h2>Register</h2>
+    <form action="register" method="Post">
+        <table>
+            <tr>
+                <td>Name<span style="color: red;">*</span></td>
+                <td>
+                    <div class="name-fields">
+                        <div>
+                            <input type="text" name="firstName" id="firstName">
+                            <span class="sub-label">First</span>
+                        </div>
+                        <div>
+                            <input type="text" name="lastName" id="lastName">
+                            <span class="sub-label">Last</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Username<span style="color: red;">*</span></td>
+                <td><input type="text" name="username" id="username" required></td>
+            </tr>
+            <tr>
+                <td>Email<span style="color: red;">*</span></td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>Password<span style="color: red;">*</span></td>
+                <td><input type="password" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>
+                    <input type="url" name="fb" id="fb">
+                    <span class="sub-label">Enter your Facebook profile URL</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Short Bio</td>
+                <td>
+                    <textarea id="bio" name="bio"></textarea>
+                    <span class="sub-label">Share a little information about yourself.</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
